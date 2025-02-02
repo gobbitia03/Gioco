@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mastermind Online</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>Mastermind</h1>
+        <p id="description">Indovina la combinazione segreta di 4 colori!</p>
+
+        <div class="game-controls">
+            <label for="attempt">Inserisci il tuo tentativo (4 numeri tra 0 e 5):</label>
+            <input type="text" id="attempt" placeholder="Es. 0 1 2 3">
+            <button onclick="makeAttempt()">Invia Tentativo</button>
+        </div>
+
+        <div id="feedback"></div>
+
+        <div id="attempts">
+            <h3>Tentativi</h3>
+            <ul id="attempt-list"></ul>
+        </div>
+
+        <div id="game-over" style="display:none;">
+            <h2>Gioco Finito</h2>
+            <p>Hai esaurito i tentativi! La combinazione segreta era: <span id="secret-combination"></span></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
